@@ -1,12 +1,6 @@
 import 'package:riverpod/riverpod.dart';
 
-import 'riverpod_async_value_sync_platform_interface.dart';
-
-class RiverpodAsyncValueSync {
-  Future<String?> getPlatformVersion() {
-    return RiverpodAsyncValueSyncPlatform.instance.getPlatformVersion();
-  }
-
+extension AsyncValueSync on AsyncValue {
   static T all<T extends Object>(
     Iterable<AsyncValue> values, {
     required T Function(Iterable<AsyncValue> data) data,

@@ -1,15 +1,18 @@
 # riverpod_async_value_sync
 
-A new Flutter plugin project.
+This plugin provides a method to check if all `AsyncValue` variables from Riverpod are ready for consumption.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+```dart
+final valueA = ref.watch(providerA);
+final valueB = ref.watch(providerB);
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+AsyncValue.all(
+  [valueA, valueB], 
+  data: (values) => values,
+  error: (values) => values, # the error callback is called if any `AsyncValue` has an error
+  loading: () => 'loading',
+);
+```
 
