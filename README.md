@@ -8,7 +8,7 @@ This plugin provides a method to check if all `AsyncValue` variables from Riverp
 final valueA = ref.watch(providerA);
 final valueB = ref.watch(providerB);
 
-AsyncValue.all(
+return AsyncValueSync.all(
   [valueA, valueB], 
   data: (values) => values,
   error: (values) => values, # the error callback is called if any `AsyncValue` has an error
