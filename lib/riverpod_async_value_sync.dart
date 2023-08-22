@@ -1,6 +1,6 @@
 import 'package:riverpod/riverpod.dart';
 
-extension AsyncValueSync on AsyncValue {
+class AsyncValueSync {
   static T all<T extends Object>(
     Iterable<AsyncValue> values, {
     required T Function(Iterable<AsyncValue> data) data,
