@@ -11,7 +11,7 @@ final valueB = ref.watch(providerB);
 return AsyncValueSync.all(
   [valueA, valueB], 
   data: (values) => values,
-  error: (values) => values, # the error callback is called if any `AsyncValue` has an error
+  error: (values) => values, // the error callback is called if any `AsyncValue` has an error
   loading: () => 'loading',
 );
 ```
