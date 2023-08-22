@@ -1,6 +1,6 @@
 name: riverpod_async_value_sync
 description: AsyncValue synchronization method
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/klaus-moon/riverpod_async_value_sync
 
 environment:
